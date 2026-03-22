@@ -1,0 +1,33 @@
+{
+  "analysis_progress": {
+    "total_stocks": 500,
+    "current_index": 1,
+    "completed_count": 1,
+    "last_analysis_date": "2026-03-22",
+    "last_stock": {
+      "name": "贵州茅台",
+      "code": "600519",
+      "report_file": "2026-03-22-贵州茅台 -600519.md"
+    },
+    "next_stock": {
+      "name": "待确定",
+      "code": "待确定",
+      "scheduled_date": "2026-03-23"
+    }
+  },
+  "schedule": {
+    "cron": "30 7 * * *",
+    "timezone": "Asia/Shanghai",
+    "enabled": true
+  },
+  "output": {
+    "gitee_repo": "https://gitee.com/lynhahaha/daily-a-stock-analysis",
+    "reports_dir": "reports",
+    "filename_format": "YYYY-MM-DD-公司名 - 代码.md"
+  },
+  "notification": {
+    "channel": "qqbot",
+    "user_id": "0CE0E229BBAEF99D1E8835B3E07728DE",
+    "include_link": true
+  }
+}

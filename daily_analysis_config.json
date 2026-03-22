@@ -1,0 +1,83 @@
+{
+  "name": "daily-a-stock-analysis",
+  "schedule": "30 7 * * *",
+  "timezone": "Asia/Shanghai",
+  "enabled": true,
+  "description": "每日早上 7:30 生成 A 股深度分析报告",
+  "config": {
+    "stock_pool": "沪深 300+ 中证 500 (Top500)",
+    "analysis_order": "按市值降序",
+    "output_dir": "reports",
+    "push_target": "gitee",
+    "notify_user": true,
+    "template": "巴菲特价值投资框架"
+  },
+  "workflow": [
+    {
+      "step": 1,
+      "action": "fetch_stock_list",
+      "description": "获取 Top500 股票列表，按顺序选择下一家公司"
+    },
+    {
+      "step": 2,
+      "action": "deep_research",
+      "description": "使用 Tavily API 收集最新财务数据、市场份额、研报",
+      "tool": "tavily-search",
+      "queries": [
+        "公司名 财报 营业收入 净利润 现金流",
+        "公司名 ROE 毛利率 净利率 分红",
+        "公司名 市场份额 竞争格局 行业地位",
+        "公司名 护城河 品牌价值 定价权",
+        "公司名 估值 PE 市盈率 DCF 目标价"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "generate_report",
+      "description": "生成深度研究报告",
+      "template": {
+        "title": "公司名深度研究报告",
+        "sections": [
+          "核心摘要",
+          "公司概况与历史沿革",
+          "财务数据分析（5-10 年）",
+          "护城河分析",
+          "行业竞争格局",
+          "投资价值评估（DCF 模型）",
+          "结论与投资建议",
+          "数据来源清单"
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "action": "save_report",
+      "description": "保存报告到 reports 目录",
+      "filename_format": "YYYY-MM-DD-公司名 - 代码.md"
+    },
+    {
+      "step": 5,
+      "action": "git_commit",
+      "description": "提交到 Git 仓库"
+    },
+    {
+      "step": 6,
+      "action": "push_gitee",
+      "description": "推送到 Gitee 远程仓库",
+      "repo": "https://gitee.com/lynhahaha/daily-a-stock-analysis.git"
+    },
+    {
+      "step": 7,
+      "action": "notify_user",
+      "description": "发送 QQ 消息通知用户",
+      "content": "今日报告已完成 + 文档链接"
+    }
+  ],
+  "progress_tracking": {
+    "current_index": 1,
+    "total_stocks": 500,
+    "last_analysis_date": "2026-03-22",
+    "last_stock": "贵州茅台 (600519)",
+    "next_stock": "待确定"
+  }
+}
