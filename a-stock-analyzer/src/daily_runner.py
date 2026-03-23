@@ -116,111 +116,23 @@ def analyze_today():
     return True
 
 def push_to_gitee():
-    """推送到 Gitee"""
+    """推送到 Gitee - 使用 Python API"""
     print(f"\n{'='*60}")
     print("📤 推送到 Gitee...")
     print(f"{'='*60}\n")
     
-    # 加载配置
-    with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
-        config = json.load(f)
-    
-    repo_name = config['gitee']['repoName']
-    owner = config['gitee']['owner']
-    token = config['gitee']['token']
-    repo_path = f"{WORKSPACE}/gitee_repos/{repo_name}"
-    
-    # 创建或克隆仓库
-    gitee_dir = Path(repo_path)
-    
-    if not gitee_dir.exists():
-        print(f"📁 创建仓库目录：{repo_path}")
-        gitee_dir.mkdir(parents=True, exist_ok=True)
-        
-        # 初始化 git
-        subprocess.run(['git', 'init'], cwd=repo_path, capture_output=True)
-        subprocess.run(['git', 'remote', 'add', 'origin', f'https://{owner}:{token}@gitee.com/{owner}/{repo_name}.git'], 
-                      cwd=repo_path, capture_output=True)
-    
-    # 复制最新报告
-    daily_report = f"{REPORTS_DIR}/daily-analysis.md"
-    if os.path.exists(daily_report):
-        today = datetime.now().strftime('%Y-%m-%d')
-        # 读取报告第一行获取公司名称
-        with open(daily_report, 'r', encoding='utf-8') as f:
-            first_line = f.readline()
-            # 提取公司名，如 "# 📊 贵州茅台 (600519) 深度分析报告"
-            if '📊' in first_line and '(' in first_line:
-                company = first_line.split('📊')[1].split('(')[0].strip()
-                code = first_line.split('(')[1].split(')')[0].strip()
-                dest_file = f"{gitee_path}/reports/{today}-{company}-{code}.md"
-            else:
-                dest_file = f"{gitee_path}/reports/{today}-analysis.md"
-        Path(f"{gitee_path}/reports").mkdir(parents=True, exist_ok=True)
-        
-        with open(daily_report, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        with open(dest_file, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        # 更新 README
-        readme_content = f"""# 📊 每日 A 股深度分析
-
-> 基于巴菲特投资哲学的 A 股公司深度分析报告
-
-## 📅 最新报告
-
-- [{today}](./reports/{today}-analysis.md) - {today}
-
-## 📁 历史报告
-
-查看所有 [历史报告](./reports/)
-
-## 🎯 分析框架
-
-本报告采用巴菲特价值投资哲学，重点关注：
-
-1. **净资产收益率 (ROE)** - 巴菲特最看重的指标
-2. **自由现金流** - 现金为王
-3. **护城河** - 竞争优势
-4. **管理层** - 诚信与能力
-5. **估值** - 安全边际
-
-## 📊 分析顺序
-
-按照沪深 300 成分股当前市值排序，每天分析一家公司。
-
-## ⏰ 更新时间
-
-每日早上 7:00 前完成更新
-
----
-
-*报告由 小财助手 自动生成*
-*分析框架：巴菲特价值投资哲学*
-*数据源：东方财富、新浪财经*
-
-## 🔗 仓库地址
-
-https://gitee.com/{owner}/{repo_name}
-"""
-        
-        with open(f"{gitee_path}/README.md", 'w', encoding='utf-8') as f:
-            f.write(readme_content)
-        
-        # Git 操作
-        subprocess.run(['git', 'add', '.'], cwd=gitee_path, capture_output=True)
-        subprocess.run(['git', 'commit', '-m', f'feat: add {today} analysis report'], 
-                      cwd=gitee_path, capture_output=True)
-        subprocess.run(['git', 'push', 'origin', 'main', '-f'], 
-                      cwd=gitee_path, capture_output=True)
-        
-        print(f"✅ 已推送到 Gitee: https://gitee.com/{owner}/{repo_name}")
+    # 使用 Python 脚本推送到 Gitee
+    push_script = f"{WORKSPACE}/../scripts/push_to_gitee.py"
+    if os.path.exists(push_script):
+        result = subprocess.run(['python3', push_script], capture_output=True, text=True)
+        print(result.stdout)
+        if result.returncode != 0:
+            print(f"❌ 推送失败：{result.stderr}")
+            return False
         return True
-    
-    print("❌ 未找到报告文件")
-    return False
+    else:
+        print(f"❌ 未找到推送脚本：{push_script}")
+        return False
 
 def main():
     """主函数"""
