@@ -115,29 +115,31 @@ def analyze_today():
     
     return True
 
-def push_to_github():
-    """推送到 GitHub"""
+def push_to_gitee():
+    """推送到 Gitee"""
     print(f"\n{'='*60}")
-    print("📤 推送到 GitHub...")
+    print("📤 推送到 Gitee...")
     print(f"{'='*60}\n")
     
     # 加载配置
     with open(CONFIG_FILE, 'r', encoding='utf-8') as f:
         config = json.load(f)
     
-    repo_name = config['github']['repoName']
-    repo_path = f"{WORKSPACE}/github_repos/{repo_name}"
+    repo_name = config['gitee']['repoName']
+    owner = config['gitee']['owner']
+    token = config['gitee']['token']
+    repo_path = f"{WORKSPACE}/gitee_repos/{repo_name}"
     
     # 创建或克隆仓库
-    github_dir = Path(repo_path)
+    gitee_dir = Path(repo_path)
     
-    if not github_dir.exists():
+    if not gitee_dir.exists():
         print(f"📁 创建仓库目录：{repo_path}")
-        github_dir.mkdir(parents=True, exist_ok=True)
+        gitee_dir.mkdir(parents=True, exist_ok=True)
         
         # 初始化 git
         subprocess.run(['git', 'init'], cwd=repo_path, capture_output=True)
-        subprocess.run(['git', 'remote', 'add', 'origin', f'https://github.com/openclaw-bot/{repo_name}.git'], 
+        subprocess.run(['git', 'remote', 'add', 'origin', f'https://{owner}:{token}@gitee.com/{owner}/{repo_name}.git'], 
                       cwd=repo_path, capture_output=True)
     
     # 复制最新报告
@@ -151,10 +153,10 @@ def push_to_github():
             if '📊' in first_line and '(' in first_line:
                 company = first_line.split('📊')[1].split('(')[0].strip()
                 code = first_line.split('(')[1].split(')')[0].strip()
-                dest_file = f"{repo_path}/reports/{today}-{company}-{code}.md"
+                dest_file = f"{gitee_path}/reports/{today}-{company}-{code}.md"
             else:
-                dest_file = f"{repo_path}/reports/{today}-analysis.md"
-        Path(f"{repo_path}/reports").mkdir(parents=True, exist_ok=True)
+                dest_file = f"{gitee_path}/reports/{today}-analysis.md"
+        Path(f"{gitee_path}/reports").mkdir(parents=True, exist_ok=True)
         
         with open(daily_report, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -198,19 +200,23 @@ def push_to_github():
 *报告由 小财助手 自动生成*
 *分析框架：巴菲特价值投资哲学*
 *数据源：东方财富、新浪财经*
+
+## 🔗 仓库地址
+
+https://gitee.com/{owner}/{repo_name}
 """
         
-        with open(f"{repo_path}/README.md", 'w', encoding='utf-8') as f:
+        with open(f"{gitee_path}/README.md", 'w', encoding='utf-8') as f:
             f.write(readme_content)
         
         # Git 操作
-        subprocess.run(['git', 'add', '.'], cwd=repo_path, capture_output=True)
+        subprocess.run(['git', 'add', '.'], cwd=gitee_path, capture_output=True)
         subprocess.run(['git', 'commit', '-m', f'feat: add {today} analysis report'], 
-                      cwd=repo_path, capture_output=True)
+                      cwd=gitee_path, capture_output=True)
         subprocess.run(['git', 'push', 'origin', 'main', '-f'], 
-                      cwd=repo_path, capture_output=True)
+                      cwd=gitee_path, capture_output=True)
         
-        print(f"✅ 已推送到 GitHub: https://github.com/openclaw-bot/{repo_name}")
+        print(f"✅ 已推送到 Gitee: https://gitee.com/{owner}/{repo_name}")
         return True
     
     print("❌ 未找到报告文件")
@@ -227,8 +233,8 @@ def main():
         print("\n❌ 分析失败，退出")
         sys.exit(1)
     
-    # 推送到 GitHub
-    push_to_github()
+    # 推送到 Gitee
+    push_to_gitee()
     
     print(f"\n{'='*60}")
     print("✅ 所有任务完成！")

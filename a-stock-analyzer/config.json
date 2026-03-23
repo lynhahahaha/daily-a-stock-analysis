@@ -1,8 +1,10 @@
 {
-  "github": {
+  "gitee": {
     "repoName": "daily-a-stock-analysis",
+    "owner": "lynhahahaha",
     "visibility": "public",
-    "branch": "main"
+    "branch": "main",
+    "token": "b0f57aab37ed4d3b6e49f96c7e7b2f98"
   },
   "stockPool": "hs300",
   "schedule": {
