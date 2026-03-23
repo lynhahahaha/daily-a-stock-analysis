@@ -1,0 +1,20 @@
+{
+  "name": "daily-a-stock-analysis",
+  "description": "每日 A 股深度分析 - 巴菲特投资哲学",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 7 * * *",
+    "tz": "Asia/Shanghai"
+  },
+  "task": {
+    "command": "python3 /root/.openclaw/workspace/a-stock-analyzer/src/daily_runner.py",
+    "cwd": "/root/.openclaw/workspace/a-stock-analyzer",
+    "timeout": 300
+  },
+  "notification": {
+    "enabled": true,
+    "channel": "qqbot",
+    "to": "0CE0E229BBAEF99D1E8835B3E07728DE",
+    "message": "📊 小财助手：今日 A 股分析报告已生成！\n\n查看报告：https://github.com/YOUR_USERNAME/daily-a-stock-analysis\n\n今天分析的公司已推送到 GitHub，欢迎查看～"
+  }
+}

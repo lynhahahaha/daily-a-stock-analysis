@@ -1,0 +1,373 @@
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-11
+============================================================
+
+📈 今日分析目标：贵州茅台(600519)
+   进度：1/15
+   市值排名：1
+
+============================================================
+正在分析：贵州茅台(600519)
+============================================================
+  [1/2] 加载数据...
+  [2/2] 生成深度报告...
+
+✅ 贵州茅台 分析完成！
+
+📄 报告已保存
+
+
+✅ 今日分析完成！
+   下一家：五粮液
+
+============================================================
+📤 推送到 GitHub...
+============================================================
+
+✅ 已推送到 GitHub: https://github.com/openclaw-bot/daily-a-stock-analysis
+
+============================================================
+✅ 所有任务完成！
+============================================================
+
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-12
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-13
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-14
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-15
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-16
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-17
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-18
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-19
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-20
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-21
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-22
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出
+
+============================================================
+🤖 小财助手 - 每日 A 股分析系统
+============================================================
+
+============================================================
+📊 每日 A 股分析 - 2026-03-23
+============================================================
+
+📈 今日分析目标：五粮液(000858)
+   进度：2/15
+   市值排名：2
+❌ 分析失败：Traceback (most recent call last):
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 534, in <module>
+    main()
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 520, in main
+    report = analyzer.analyze()
+             ^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 508, in analyze
+    report = self.generate_report()
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.openclaw/workspace/a-stock-analyzer/src/analyze_stock.py", line 113, in generate_report
+    roe_trend = "上升" if roe_vals[0] > roe_vals[-1]*1.05 else "下降" if roe_vals[0] < roe_vals[-1]*0.95 else "稳定"
+                          ~~~~~~~~^^^
+IndexError: list index out of range
+
+
+❌ 分析失败，退出

@@ -1,0 +1,21 @@
+{
+  "action": "add",
+  "job": {
+    "name": "每日 A 股分析报告",
+    "schedule": {
+      "kind": "cron",
+      "expr": "0 7 * * *",
+      "tz": "Asia/Shanghai"
+    },
+    "sessionTarget": "isolated",
+    "wakeMode": "now",
+    "deleteAfterRun": false,
+    "payload": {
+      "kind": "agentTurn",
+      "message": "📊 小财助手：今日 A 股分析报告已生成！\n\n今天分析的是沪深 300 成分股，报告已推送到 GitHub。\n\n查看报告：https://github.com/lynhahahaha/daily-a-stock-analysis\n\n新的一天，从了解一家好公司开始～ 📈",
+      "deliver": true,
+      "channel": "qqbot",
+      "to": "0CE0E229BBAEF99D1E8835B3E07728DE"
+    }
+  }
+}

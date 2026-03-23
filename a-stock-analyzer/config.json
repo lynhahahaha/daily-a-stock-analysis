@@ -1,0 +1,46 @@
+{
+  "github": {
+    "repoName": "daily-a-stock-analysis",
+    "visibility": "public",
+    "branch": "main"
+  },
+  "stockPool": "hs300",
+  "schedule": {
+    "timezone": "Asia/Shanghai",
+    "runTime": "07:00"
+  },
+  "analysis": {
+    "metrics": [
+      "roe",
+      "roa",
+      "profitMargin",
+      "debtToEquity",
+      "freeCashFlow",
+      "revenueGrowth",
+      "netProfitGrowth",
+      "grossMargin",
+      "operatingMargin",
+      "currentRatio",
+      "quickRatio",
+      "assetTurnover",
+      "equityMultiplier",
+      "peRatio",
+      "pbRatio",
+      "dividendYield"
+    ],
+    "buffettFactors": [
+      "护城河分析",
+      "管理层评价",
+      "商业模式",
+      "竞争优势",
+      "行业地位"
+    ]
+  },
+  "dataSources": {
+    "eastmoney": "https://datacenter.eastmoney.com/securities/api/data/get",
+    "sina": "https://hq.sinajs.cn/"
+  },
+  "qqbot": {
+    "userId": "0CE0E229BBAEF99D1E8835B3E07728DE"
+  }
+}
