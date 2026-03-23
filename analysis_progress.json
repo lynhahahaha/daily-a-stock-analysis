@@ -18,14 +18,20 @@
         "stock": "贵州茅台",
         "code": "600519",
         "market_cap_rank": 1
+      },
+      {
+        "date": "2026-03-23",
+        "stock": "五粮液",
+        "code": "000858",
+        "market_cap_rank": 2
       }
     ],
     "next_analysis": {
-      "date": "2026-03-23",
-      "stock": "宁德时代",
-      "code": "300750",
-      "market_cap_rank": 2,
-      "reason": "A 股市值排名第 2"
+      "date": "2026-03-24",
+      "stock": "中国平安",
+      "code": "601318",
+      "market_cap_rank": 3,
+      "reason": "A 股市值排名第 3"
     }
   }
 }
